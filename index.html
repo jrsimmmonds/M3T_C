@@ -11,7 +11,6 @@
     </script>
 	
 	    <script type="text/javascript">
-	    console.log("V001");
       var userEmail;
       window.onmessage = (event) => {
         if (event.data) {
@@ -23,13 +22,10 @@
       };
 	    
 	    function IsUnityReady() {
-		    console.log("IsUnityReady fucntion has run");
 	    	SetEmail();
 	    }
 	    
 	 function SetEmail() {
-		console.log("setEmail fucntion has run");
-	 	//document.getElementById("email").innerHTML = userEmail;
 		 unityInstance.SendMessage('Bridge', 'SendToUnity', userEmail);
 	 }
     </script>
